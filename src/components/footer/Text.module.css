@@ -1,0 +1,10 @@
+.box {
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  white-space: pre-line;
+  /* width: 770px; */
+}
