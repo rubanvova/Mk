@@ -1,3 +1,3 @@
-import Title from "./TitleText";
+import Title from "./Title";
 
 export default Title;
