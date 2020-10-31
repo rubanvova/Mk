@@ -9,7 +9,7 @@ import BoxServiceList from "./BoxServiceList";
 import { textOne, textTwo, textFour } from "./constants";
 import Slider from "../Slider";
 import { secondarySlides } from "../../data";
-import BoxWhite from "./BoxWhite";
+import BoxAboutas from "./BoxAboutas";
 import BoxAdvantages from "./BoxAdvantages";
 import BoxCooperation from "./BoxCooperation";
 
@@ -90,7 +90,7 @@ const Content = () => {
         <BoxServiceList />
       </div>
       <div className={styles.whiteBoxTwo}>
-        <BoxWhite />
+        <BoxAboutas />
       </div>
       <div className={styles.wrapperContent}>
         <BoxAdvantages />

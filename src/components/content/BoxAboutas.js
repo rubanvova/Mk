@@ -6,7 +6,7 @@ import circle from "../../images/cyrcle.png";
 
 import styles from "./BoxWhite.module.css";
 
-const BoxWhite = () => {
+const BoxAboutas = () => {
   return (
     <div className={styles.wrraper}>
       <div className={styles.rowOne}>
@@ -88,4 +88,4 @@ const BoxWhite = () => {
   );
 };
 
-export default BoxWhite;
+export default BoxAboutas;

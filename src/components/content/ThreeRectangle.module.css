@@ -91,7 +91,7 @@
 
 @media (max-width: 438px) {
   .wrapperRec {
-    height: 1100px;
+    height: 1200px;
   }
   .recOne {
     width: 315px;
@@ -110,7 +110,7 @@
   .recThree {
     width: 315px;
     height: 240px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 50px 20px;
   }
 
   .recThree div:nth-child(2) {
