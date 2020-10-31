@@ -105,7 +105,7 @@ const Item = ({
       {onlyImages ? null : (
         <div className={styles.box}>
           <div className={styles.text}>
-            <TitleText children={title} />
+            <TitleText> {title}</TitleText>
             <Text>{text}</Text>
             <div className={styles.button}>
               <Button children="Подробнее" />
