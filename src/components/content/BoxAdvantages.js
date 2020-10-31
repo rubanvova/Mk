@@ -3,51 +3,53 @@ import React from "react";
 import Text from "../Text";
 import TitleText from "../Title";
 
-import advan1 from "./img/advan1.png";
-import advan2 from "./img/advan2.png";
-import advan3 from "./img/advan3.png";
-import advan4 from "./img/advan4.png";
-import treangle from "./img/treangle.png";
+import images from "../../images";
 
 import styles from "./BoxAdvantages.module.css";
+
+const data = [
+  {
+    img: images.advan1,
+    text: "Лицензия на оказание юридических услуг",
+  },
+  {
+    img: images.advan2,
+    text:
+      "Коммуникативные навыки – без труда открываем любые двери и быстро решаем нужные вопросы",
+  },
+  {
+    img: images.advan3,
+    text: "Скрупулезный поход к ведению документации",
+  },
+  {
+    img: images.advan4,
+    text: "Скрупулезный поход к ведению документации",
+  },
+];
+
+const Box = ({ img, text }) => (
+  <div className={styles.box}>
+    <img src={img} alt="" height="130px" width="230px" />
+    <Text className={styles.clmaxWidth230}>{text}</Text>
+  </div>
+);
 
 const BoxAdvantages = () => {
   return (
     <div className={styles.wrapper}>
-      <TitleText body="Наши преимущества" m="80px 0px 20px 10px" />
+      <TitleText className={styles.clMargin}> {"Наши преимущества"} </TitleText>
       <div className={styles.boxs}>
-        <div className={styles.box}>
-          <img src={advan1} alt="" height="130px" width="230px" />
-          <Text
-            maxWidth="230px"
-            body="Лицензия на оказание юридических услуг"
-          />
-        </div>
-        <div className={styles.box}>
-          <img src={advan2} alt="" height="130px" width="230px" />
-          <Text maxWidth="230px" body="Опытные сотрудники" />
-        </div>
-        <div className={styles.box}>
-          <img src={advan3} alt="" height="130px" width="230px" />
-          <Text
-            maxWidth="230px"
-            body="Коммуникативные навыки – без труда открываем любые двери и быстро решаем нужные вопросы"
-          />
-        </div>
-        <div className={styles.box}>
-          <img src={advan4} alt="" height="130px" width="230px" />
-          <Text
-            maxWidth="230px"
-            body="Скрупулезный поход к ведению документации"
-          />
-        </div>
+        {data.map((i, imdex) => (
+          <Box key={imdex} img={i.img} text={i.text} />
+        ))}
       </div>
       <div className={styles.boxfooter}>
-        <img src={treangle} alt="" />
-        <Text
-          maxWidth="730px"
-          body="Юристы нашей компании готовы дать четкие, основанные на фактах, консультации, касающиеся и «типовой», и нестандартной ситуации, опираясь на сложившуюся служебную практику и многолетний опыт. Мы объективно оцениваем риски и тщательно анализируем каждый случай."
-        />
+        <img src={images.treangle} alt="" />
+        <Text className={styles.clmaxWidth730}>
+          {
+            "Юристы нашей компании готовы дать четкие, основанные на фактах, консультации, касающиеся и «типовой», и нестандартной ситуации, опираясь на сложившуюся служебную практику и многолетний опыт. Мы объективно оцениваем риски и тщательно анализируем каждый случай."
+          }
+        </Text>
       </div>
     </div>
   );

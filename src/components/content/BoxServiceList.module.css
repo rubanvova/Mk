@@ -41,6 +41,15 @@
   justify-content: space-between;
 }
 
+.clWidth100 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 1230px) {
   .box {
     margin: 0 10px;
@@ -70,4 +79,16 @@
   .wrapper {
     padding-bottom: 50px;
   }
+}
+
+.clFontsize {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.clMargin20 {
+  margin: 0px 20px;
+}
+.buttonMargin {
+  margin: 20px 0px;
 }

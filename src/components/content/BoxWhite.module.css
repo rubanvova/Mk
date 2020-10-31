@@ -67,3 +67,26 @@
     margin: 0px 15px;
   }
 }
+
+.clmaxWidth470px {
+  max-width: 470px;
+}
+
+.clMaxWodth500 {
+  max-width: 500px;
+}
+
+.clfontSize17 {
+  font-size: 17px;
+}
+
+.clfontSize17Width {
+  font-size: 17px;
+  width: 380px;
+  line-height: 25px;
+}
+
+.clWidth370px {
+  width: 370px;
+  font-size: 17px;
+}

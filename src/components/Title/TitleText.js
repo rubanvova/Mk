@@ -1,20 +1,16 @@
 import React from "react";
+import classnames from "classnames";
 import styles from "./TitleText.module.css";
 
-const TitleText = ({ body, lh, fs, width, m, maxWidth, fw }) => {
+const TitleText = ({ style = {}, className, children }) => {
   return (
     <div
-      className={styles.box}
+      className={classnames(styles.box, className)}
       style={{
-        fontWeight: fw,
-        lineHeight: lh,
-        fontSize: fs,
-        width: width,
-        margin: m,
-        maxWidth: maxWidth,
+        ...style,
       }}
     >
-      {body}
+      {children}
     </div>
   );
 };

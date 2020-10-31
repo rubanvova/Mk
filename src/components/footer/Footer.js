@@ -13,6 +13,17 @@ import arrow from "./img/bigarrow.png";
 
 import styles from "./Footer.module.css";
 
+const City = ({ city, adress, email }) => {
+  return (
+    <>
+      <TitleText className={styles.clFontSize14} children={city} />
+      <TitleText className={styles.cllineHeight} children="Адрес" />
+      <TextFooter children={adress} />
+      <TitleText className={styles.cllineHeight} children={email} />
+    </>
+  );
+};
+
 const Footer = () => {
   return (
     <div className={styles.wrapperFooter}>
@@ -20,10 +31,8 @@ const Footer = () => {
       <div className={styles.contentFooter}>
         <div className={styles.footerDes}>
           <TitleText
-            width="230px"
-            body="ООО “МК-ПРАВОВЫЕ ТЕХНОЛОГИИ”"
-            m="0px 30px 70px 0px"
-            fs="20px"
+            className={styles.clWidth230}
+            children="ООО “МК-ПРАВОВЫЕ ТЕХНОЛОГИИ”"
           />
           <div className={styles.grey}>
             УНП <div>192710862</div>
@@ -40,7 +49,7 @@ const Footer = () => {
             <img src={vk} alt="" />
           </div>
           <div className={styles.arrow}>
-            <Text body="КАРТА САЙТА" />
+            <Text> {"КАРТА САЙТА"} </Text>
             <img
               src={arrow}
               alt=""
@@ -50,7 +59,9 @@ const Footer = () => {
             />
           </div>
           <div className={styles.arrow}>
-            <Text width="100px" body="Политика конфиденциальности" />
+            <Text className={styles.clWidth100}>
+              {"Политика конфиденциальности"}
+            </Text>
             <img
               src={arrow}
               alt=""
@@ -62,118 +73,80 @@ const Footer = () => {
         </div>
         <div>
           <div className={styles.title}>
-            <Text body="НАШИ ОФИСЫ" />
+            <Text> {"НАШИ ОФИСЫ"}</Text>
           </div>
           <div className={styles.city}>
             <div className={styles.minsk}>
-              <TitleText body="КОНТАКТЫ В МИСНКЕ" fs="14px" />
+              <TitleText
+                className={styles.clFontSize14}
+                children="КОНТАКТЫ В МИСНКЕ"
+              />
               <TextFooter
-                body={
+                children={
                   "+375 (44) 755-01-01 \n +375 (29) 550-01-01 \n+375 (17) 374-40-60"
                 }
               />
-              <TitleText body="Адрес" fs="14px" fw="600" />
+              <TitleText children="Адрес" className={styles.cllineHeight} />
               <TextFooter
-                body={"г.Минск, ул. Широкая, д. 3,\n пом.146, оф. 4"}
-                fs="14px"
+                children={"г.Минск, ул. Широкая, д. 3,\n пом.146, оф. 4"}
+                className={styles.clFontSize14}
               />
               <TitleText
-                lh="20px"
-                body={"Телефон для связи резидентов \n Российской Федерации "}
-                fs="14px"
-                m="20px 0px 0px 0px"
+                className={styles.clMargin}
+                children={
+                  "Телефон для связи резидентов \n Российской Федерации "
+                }
               />
-              <TextFooter body={"whatsapp +7 (989) 166 24 00 \n"} />
+              <TextFooter children={"whatsapp +7 (989) 166 24 00 \n"} />
               <TitleText
-                lh="20px"
-                body={"info@jurisprudent.by"}
-                fs="14px"
-                m="20px 0px 0px 0px"
+                className={styles.clMargin}
+                children={"info@jurisprudent.by"}
               />
             </div>
             <div className={styles.mogilev}>
-              <TitleText body="ОТДЕЛ В МОГИЛЕВЕ" fs="14px" />
-              <TitleText body="Адрес" fs="14px" lh={"20px"} fw="600" />
-              <TextFooter
-                body={"г. Могилев, ул. Космонавтов,\nд. 19, оф. 507"}
+              <City
+                city={"ОТДЕЛ В МОГИЛЕВЕ"}
+                adress={"г. Могилев, ул. Космонавтов,\nд. 19, оф. 507"}
+                email="mogilev@jurisprudent.by"
               />
-              <TitleText body="mogilev@jurisprudent.by" fs="14px" lh={"20px"} />
-
-              <TitleText body="ОТДЕЛ В БРЕСТЕ" fs="14px" />
-              <TitleText body="Адрес" fs="14px" lh={"20px"} fw="600" />
-              <TextFooter body={"г. Брест, б-р Шевченко,\n д. 4, оф. 401 "} />
-              <TitleText
-                body="brest@jurisprudent.by"
-                fs="14px"
-                lh={"20px"}
-                fw="600"
+              <City
+                city={"ОТДЕЛ В БРЕСТЕ"}
+                adress={"г. Брест, б-р Шевченко,\n д. 4, оф. 401"}
+                email="brest@jurisprudent.by"
               />
-
-              <TitleText body="ОТДЕЛ В ВИТЕБСКЕ" fs="14px" />
-              <TitleText body="Адрес" fs="14px" lh={"20px"} fw="600" />
-              <TextFooter body={"г. Витебск, ул.Гоголя,\n д. 14, оф. 614"} />
-              <TitleText
-                body="vitebsk@jurisprudent.by"
-                fs="14px"
-                lh={"20px"}
-                fw="600"
+              <City
+                city={"ОТДЕЛ В ВИТЕБСКЕ"}
+                adress={"г. Витебск, ул.Гоголя,\n д. 14, оф. 614"}
+                email="vitebsk@jurisprudent.by"
               />
             </div>
             <div className={styles.grodno}>
-              <TitleText body="ОТДЕЛ В ГРОДНО" fs="14px" />
-              <TitleText body="Адрес" fs="14px" lh={"20px"} fw="600" />
-              <TextFooter
-                body={"г. Гродно, ул. Карла Маркса,\n д. 31-1, оф. 1010"}
+              <City
+                city={"ОТДЕЛ В ГРОДНО"}
+                adress={"г. Гродно, ул. Карла Маркса,\n д. 31-1, оф. 1010"}
+                email="grodno@jurisprudent.by"
               />
-              <TitleText
-                body="grodno@jurisprudent.by"
-                fs="14px"
-                lh={"20px"}
-                fw="600"
-              />
-              <TitleText body="ОТДЕЛ В ГОМЕЛЕ" fs="14px" />
-              <TitleText body="Адрес" fs="14px" lh={"20px"} fw="600" />
-              <TextFooter body={"г. Гомель, пр. Ленина, д. 10,\n оф. 901"} />
-              <TitleText
-                body="gomel@jurisprudent.by"
-                fs="14px"
-                lh={"20px"}
-                fw="600"
+              <City
+                city={"ОТДЕЛ В ГОМЕЛЕ"}
+                adress={"г. Гомель, пр. Ленина, д. 10,\n оф. 901"}
+                email="gomel@jurisprudent.by"
               />
             </div>
           </div>
         </div>
         <div className={styles.time}>
-          <Text body="ВРЕМЯ РАБОТЫ" />
+          <Text> {"ВРЕМЯ РАБОТЫ"}</Text>
           <div className={styles.bd}></div>
-          <TitleText
-            body="Прием посетителей"
-            fs="14px"
-            lh={"20px"}
-            fw="600"
-            m="10px 0px 0px 0px "
-          />
+          <TitleText className={styles.clFont} children="Прием посетителей" />
           <TextFooter
-            body={
+            children={
               "Ежедневно с 8.00 до 19.00\nВыходной: суббота - воскресенье.\n"
             }
           />
-          <TitleText
-            body="Прием звонков"
-            fs="14px"
-            lh={"20px"}
-            fw="600"
-            m="20px 0px 0px 0px "
-          />
-          <TextFooter body={"Ежедневно с 8.00 до 22.00\nБез выходных "} />
-          <TitleText
-            body="Онлайн консультант"
-            fs="14px"
-            lh={"20px"}
-            fw="600"
-            m="20px 0px 0px 0px "
-          />
-          <TextFooter body={"Круглосуточно 24/7\nБез выходных "} />
+          <TitleText className={styles.clFont} children="Прием звонков" />
+          <TextFooter children={"Ежедневно с 8.00 до 22.00\nБез выходных "} />
+          <TitleText className={styles.clFont} children="Онлайн консультант" />
+          <TextFooter children={"Круглосуточно 24/7\nБез выходных "} />
         </div>
       </div>
     </div>

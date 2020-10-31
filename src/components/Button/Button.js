@@ -1,15 +1,11 @@
 import React from "react";
+import classnames from "classnames";
 import styles from "./Button.module.css";
 
-const Button = ({ body, m, width, maxWidth }) => {
-  return (
-    <button
-      className={styles.button}
-      style={{ margin: m, width: width, maxWidth: maxWidth }}
-    >
-      {body}
-    </button>
-  );
-};
+const Button = ({ style = {}, className, children }) => (
+  <button className={classnames(styles.button, className)} style={{ ...style }}>
+    {children}
+  </button>
+);
 
 export default Button;

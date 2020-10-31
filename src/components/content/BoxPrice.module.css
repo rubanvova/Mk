@@ -3,3 +3,15 @@
     margin: 0 10px;
   }
 }
+
+.clmaxWidth670 {
+  max-width: 670px;
+}
+
+.clMargin {
+  margin: 100px 0px 0px 0px;
+}
+
+.buttonMargin {
+  margin: 20px 0px 0px 0px;
+}

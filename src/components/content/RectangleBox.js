@@ -1,32 +1,43 @@
 import React from "react";
 import Text from "../Text";
-
-import icon1 from "./img/icon1.png";
-import icon2 from "./img/icon2.png";
-import icon3 from "./img/icon3.png";
-import icon4 from "./img/icon4.png";
+import images from "../../images";
 
 import styles from "./RectangleBox.module.css";
+
+const data = [
+  {
+    img: images.icon1,
+    str: "Надежная защита",
+  },
+  {
+    img: images.icon2,
+    str: "Безупречная репутация",
+  },
+  {
+    img: images.icon3,
+    str: "Ориентированность на \nрезультат",
+  },
+  {
+    img: images.icon4,
+    str: "Абсолютная \nконфиденциальность",
+  },
+];
+
+const Box = ({ img, str }) => {
+  return (
+    <div className={styles.rec}>
+      <img src={img} alt="" />
+      <Text>{str}</Text>
+    </div>
+  );
+};
 
 const RectangleBox = () => {
   return (
     <div className={styles.rectangles}>
-      <div className={styles.rec}>
-        <img src={icon1} alt="" />
-        <Text body={"Надежная защита"} />
-      </div>
-      <div className={styles.rec}>
-        <img src={icon2} alt="" />
-        <Text body={"Безупречная репутация"} />
-      </div>
-      <div className={styles.rec}>
-        <img src={icon3} alt="" style={{ paddingTop: "14px" }} />
-        <Text body={"Ориентированность на \nрезультат"} />
-      </div>
-      <div className={styles.rec}>
-        <img src={icon4} alt="" style={{ paddingTop: "14px" }} />
-        <Text body={"Абсолютная \nконфиденциальность"} />
-      </div>
+      {data.map((i, index) => (
+        <Box key={index} img={i.img} str={i.str} />
+      ))}
     </div>
   );
 };

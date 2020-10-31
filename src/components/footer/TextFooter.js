@@ -1,21 +1,16 @@
 import React from "react";
+import classnames from "classnames";
 import styles from "./Text.module.css";
 
-const Text = ({ body, width, maxWidth, cursor, fw, display, js, p }) => {
+const Text = ({ style = {}, className, children }) => {
   return (
     <div
-      className={styles.box}
+      className={classnames(styles.box, className)}
       style={{
-        fontWeight: fw,
-        paddingTop: p,
-        width: width,
-        maxWidth: maxWidth,
-        display: display,
-        justifyContent: js,
-        cursor: cursor,
+        ...style,
       }}
     >
-      {body}
+      {children}
     </div>
   );
 };

@@ -13,7 +13,6 @@ const Slider = ({
   data,
   onlyImages,
   classes = {},
-  arrowShow,
   height,
   margin,
   padding,
@@ -106,10 +105,10 @@ const Item = ({
       {onlyImages ? null : (
         <div className={styles.box}>
           <div className={styles.text}>
-            <TitleText body={title} />
-            <Text body={text} />
+            <TitleText children={title} />
+            <Text>{text}</Text>
             <div className={styles.button}>
-              <Button body="Подробнее" />
+              <Button children="Подробнее" />
             </div>
           </div>
           <div className={styles.arrowShows}>

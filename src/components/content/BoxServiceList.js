@@ -2,7 +2,7 @@ import React from "react";
 
 import TitleText from "../Title";
 import Text from "../Text";
-import { textFive } from "./bigTexts";
+import { textFive } from "./constants";
 import Button from "../Button/Button";
 
 import styles from "./BoxServiceList.module.css";
@@ -12,14 +12,8 @@ const Box = ({ text, color, width }) => {
     <div className={styles.box} style={{ width: width }}>
       <div className={styles.colorBox} style={{ backgroundColor: color }}></div>
       <div className={styles.text}>
-        <TitleText fs="20px" body={text} lh="23px" />
-        <Text
-          width="100%"
-          body="ПОДРОБНЕЕ"
-          cursor="pointer"
-          display="flex"
-          js="flex-end"
-        />
+        <TitleText className={styles.clFontsize} children={text} />
+        <Text className={styles.clWidth100}>{"ПОДРОБНЕЕ"}</Text>
       </div>
     </div>
   );
@@ -28,7 +22,9 @@ const Box = ({ text, color, width }) => {
 const BoxServiceList = () => {
   return (
     <div className={styles.wrapper}>
-      <TitleText body={"Перечень оказываемых услуг"} m="0px 20px" />
+      <TitleText className={styles.clMargin20}>
+        {"Перечень оказываемых услуг"}
+      </TitleText>
       <div className={styles.table}>
         <div className={styles.row}>
           <Box
@@ -89,7 +85,7 @@ const BoxServiceList = () => {
       </div>
       <div className={styles.footerText}>
         <Text body={textFive} maxWidth="770px" />
-        <Button body="Все услуги" m="20px 0" />
+        <Button className={styles.buttonMargin}> {"Все услуги"}</Button>
       </div>
     </div>
   );

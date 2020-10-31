@@ -102,4 +102,35 @@
   .menu div {
     padding-left: 15px;
   }
+}
+
+@media (max-width: 829px) {
+  .menu div {
+    min-width: 80px;
+    padding-left: 18px;
+  }
+  .boxTwo {
+    flex-direction: column;
+  }
+
+  .boxTwo img {
+    width: 170px;
+  }
+  .menu {
+    padding-top: 10px;
+    width: 350px;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 786px) {
+  .menu div {
+    padding-left: 15px;
+  }
+  .phoneNumber {
+    display: none;
+  }
+  .view {
+    margin-right: 30px;
+  }
 } ;
