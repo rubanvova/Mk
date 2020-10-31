@@ -330,6 +330,9 @@
   .panel {
     justify-content: center;
   }
+  .textThree div:nth-child(2) {
+    margin-top: 20px;
+  }
   .cercles {
     display: none;
   }

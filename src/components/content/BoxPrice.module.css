@@ -1,6 +1,9 @@
 @media (max-width: 1200px) {
   .wrapper {
     margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
