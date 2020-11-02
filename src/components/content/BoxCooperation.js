@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import classnames from "classnames";
 import InputMask from "react-input-mask";
 import TitleText from "../Title";
 import Text from "../Text";
 
 import circl1 from "../../images/circleNumber1.png";
 import circl2 from "../../images/circleNumber2.png";
+import images from "../../images";
 
 import styles from "./BoxCooperation.module.css";
 import Button from "../Button/Button";
 
+const Inputs = ({ active }) => (
+  <div
+    className={classnames(styles.wrap, {
+      [styles.show]: active,
+    })}
+  >
+    <div className={styles.inputs}>
+      <Text> {"Ваше имя"} </Text>
+      <input className={styles.input} type="text" />
+      <Text> {"Телефон для связи"} </Text>
+      <InputMask
+        className={styles.input}
+        placeholder="+375 (XX)XXX-XX-XX"
+        mask="+375 (99)999-99-99"
+        maskChar="_"
+      />
+    </div>
+    <Text>
+      {
+        "Нажимая на кнопку «Получить консультацию», вы соглашаетесь с условиями Политики конфиденциальности"
+      }
+    </Text>
+    <Button className={styles.buttonMargin}>{"Получить консультацию"}</Button>
+  </div>
+);
+
 const BoxCooperation = () => {
+  const [active, setActive] = useState(true);
+
   return (
     <div className={styles.boxs}>
       <div className={styles.boxOne}>
@@ -39,27 +69,22 @@ const BoxCooperation = () => {
         </Text>
       </div>
       <div className={styles.boxTwo}>
-        <div className={styles.wrap}>
-          <div className={styles.inputs}>
-            <Text> {"Ваше имя"} </Text>
-            <input className={styles.input} type="text" />
-            <Text> {"Телефон для связи"} </Text>
-            <InputMask
-              className={styles.input}
-              placeholder="+375 (XX)XXX-XX-XX"
-              mask="+375 (99)999-99-99"
-              maskChar="_"
+        <div className={styles.display}>
+          <div className={styles.mobileV}>
+            <Text> {"Заполнить форму"} </Text>
+            <img
+              onClick={() => setActive(!active)}
+              src={images.arrowLeft}
+              alt=""
+              className={classnames(styles.arrow, {
+                [styles.arrowActive]: !active,
+              })}
+              height="13px"
+              width="13px"
             />
           </div>
-          <Text>
-            {
-              "Нажимая на кнопку «Получить консультацию», вы соглашаетесь с условиями Политики конфиденциальности"
-            }
-          </Text>
-          <Button className={styles.buttonMargin}>
-            {"Получить консультацию"}
-          </Button>
         </div>
+        {active ? <Inputs active={active} /> : <Inputs />}
       </div>
     </div>
   );
