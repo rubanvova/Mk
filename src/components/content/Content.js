@@ -26,7 +26,7 @@ const Content = () => {
       <div className={styles.wrapperContent}>
         <RectangleBox />
         <div className={styles.container}>
-          <div>
+          <div className={styles.containerText}>
             <TitleText className={styles.clWidth520}>
               {
                 "Юридическое сопровождение бизнеса \nот «МК-Правовые технологии»"

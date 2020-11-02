@@ -4,7 +4,7 @@ import Text from "../Text";
 
 import circle from "../../images/cyrcle.png";
 
-import styles from "./BoxWhite.module.css";
+import styles from "./BoxAboutas.module.css";
 
 const BoxAboutas = () => {
   return (
