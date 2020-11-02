@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import logo from "./img/logo.svg";
 import searh from "./img/searh.svg";
 import burger from "./img/menu.png";
+import close from "./img/close.png";
 
 import styles from "./Header.module.css";
 
@@ -30,13 +31,17 @@ const Header = () => {
       <div className={styles.boxTwo}>
         <img src={logo} alt="" />
         <div className={styles.burger}>
-          <img
-            onClick={handlerMenu}
-            src={burger}
-            alt=""
-            height="24px"
-            width="24px"
-          />
+          {showMenu ? (
+            <img src={close} alt="" onClick={handlerMenu} />
+          ) : (
+            <img
+              onClick={handlerMenu}
+              src={burger}
+              alt=""
+              height="24px"
+              width="24px"
+            />
+          )}
         </div>
         {showMenu ? (
           <div className={styles.menuBurger}>
