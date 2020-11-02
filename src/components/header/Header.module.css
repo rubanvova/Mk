@@ -60,6 +60,7 @@
 }
 
 .boxTwo {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,6 +83,7 @@
 }
 
 .menu div {
+  width: 80px;
   padding-left: 50px;
   cursor: pointer;
 }
@@ -92,34 +94,89 @@
   padding-left: 50px;
 }
 
+.menuBurger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Commissioner;
+  color: rgba(0, 0, 0, 0.75);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 120px;
+  height: 160px;
+  z-index: 3;
+  position: absolute;
+  right: 30px;
+  top: 100px;
+  background: #ffffffa8;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.menuBurger div {
+  margin-left: 10px;
+}
+
+.burger {
+  display: none;
+  height: 24px;
+  width: 24px;
+  margin-right: 40px;
+}
+
+@media (max-width: 1164px) {
+  .menu div {
+    width: 130px;
+    padding: 0px 0px;
+  }
+}
+
 @media (max-width: 1041px) {
   .menu div {
-    padding-left: 30px;
+    width: 85px;
+    padding: 0px 10px;
   }
 }
 
 @media (max-width: 924px) {
   .menu div {
-    padding-left: 15px;
+    width: 79px;
+    padding: 0px 8px;
+  }
+  .menu div:nth-child(1) {
+    width: 65px;
+    padding: 0px 4px;
+  }
+  .menu div:nth-child(2) {
+    width: 65px;
+    padding: 0px 4px;
+  }
+  .menu div:nth-child(3) {
+    width: 65px;
+    padding: 0px 4px;
+  }
+  .menu img {
+    width: 65px;
+    padding: 0px 4px;
   }
 }
 
 @media (max-width: 829px) {
+  .burger {
+    display: block;
+  }
   .menu div {
     min-width: 80px;
     padding-left: 18px;
   }
   .boxTwo {
-    flex-direction: column;
+    justify-content: space-around;
   }
 
-  .boxTwo img {
-    width: 170px;
-  }
   .menu {
-    padding-top: 10px;
-    width: 350px;
-    overflow-x: scroll;
+    display: none;
   }
 }
 
