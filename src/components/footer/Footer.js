@@ -19,7 +19,7 @@ const City = ({ city, adress, email }) => {
       <TitleText className={styles.clFontSize14} children={city} />
       <TitleText className={styles.cllineHeight} children="Адрес" />
       <TextFooter children={adress} />
-      <TitleText className={styles.cllineHeight} children={email} />
+      <TitleText className={styles.clEmail} children={email} />
     </>
   );
 };

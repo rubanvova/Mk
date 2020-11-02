@@ -1,5 +1,7 @@
+@import url(../../fonts/stylesheet.css);
+
 .font {
-  font-family: Commissioner, sans-serif;
+  font-family: "Commissioner";
   font-weight: 400;
   font-size: 40px;
   line-height: 50px;

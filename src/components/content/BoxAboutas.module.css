@@ -78,16 +78,19 @@
 }
 
 .clfontSize17 {
+  font-weight: 600;
   font-size: 17px;
 }
 
 .clfontSize17Width {
   font-size: 17px;
+  font-weight: 600;
   width: 380px;
   line-height: 25px;
 }
 
 .clWidth370px {
+  font-weight: 600;
   width: 370px;
   font-size: 17px;
 }

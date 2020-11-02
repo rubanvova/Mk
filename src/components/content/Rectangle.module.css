@@ -1,3 +1,6 @@
+@import url(../../fonts/lato.css);
+@import url(../../fonts/stylesheet.css);
+
 .wrapper {
   width: 370px;
   height: 140px;
@@ -26,7 +29,7 @@
 }
 
 .text div:nth-child(1) {
-  font-family: Commissioner;
+  font-family: "Commissioner";
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
@@ -34,7 +37,7 @@
 }
 
 .text div:nth-child(2) {
-  font-family: Lato;
+  font-family: "Lato";
   font-weight: 600;
   font-size: 12px;
   line-height: 20px;

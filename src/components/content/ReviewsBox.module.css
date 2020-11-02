@@ -1,3 +1,6 @@
+@import url(../../fonts/lato.css);
+@import url(../../fonts/stylesheet.css);
+
 .wrapper {
   width: 570px;
   max-height: 585px;
@@ -9,7 +12,7 @@
 }
 
 .goldText {
-  font-family: Commissioner;
+  font-family: "Commissioner";
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
@@ -17,7 +20,7 @@
   color: #dec377;
 }
 .body {
-  font-family: Lato, sans-serif;
+  font-family: "Lato";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -32,7 +35,7 @@
 }
 
 .textfooter {
-  font-family: Lato, sans-serif;
+  font-family: "Lato";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;

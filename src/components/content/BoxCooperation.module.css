@@ -88,6 +88,11 @@
   }
 }
 
+.clFont {
+  font-size: 13px;
+  font-weight: 500;
+}
+
 .mobileV {
   width: 545px;
   display: flex;

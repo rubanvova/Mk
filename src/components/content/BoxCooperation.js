@@ -18,9 +18,9 @@ const Inputs = ({ active }) => (
     })}
   >
     <div className={styles.inputs}>
-      <Text> {"Ваше имя"} </Text>
+      <Text className={styles.clFont}> {"Ваше имя"} </Text>
       <input className={styles.input} type="text" />
-      <Text> {"Телефон для связи"} </Text>
+      <Text className={styles.clFont}> {"Телефон для связи"} </Text>
       <InputMask
         className={styles.input}
         placeholder="+375 (XX)XXX-XX-XX"
@@ -30,7 +30,7 @@ const Inputs = ({ active }) => (
     </div>
     <Text>
       {
-        "Нажимая на кнопку «Получить консультацию», вы соглашаетесь с условиями Политики конфиденциальности"
+        "Нажимая на кнопку «Получить консультацию», вы соглашаетесь с условиями  Политики конфиденциальности "
       }
     </Text>
     <Button className={styles.buttonMargin}>{"Получить консультацию"}</Button>

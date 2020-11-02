@@ -1,3 +1,6 @@
+@import url(../../fonts/lato.css);
+@import url(../../fonts/stylesheet.css);
+
 .wrapperFooter {
   background: #e5e5e5;
 }
@@ -16,7 +19,7 @@
 }
 
 .grey {
-  font-family: Commissioner;
+  font-family: "Commissioner";
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -26,7 +29,7 @@
 }
 
 .grey div {
-  font-family: Lato;
+  font-family: "Lato";
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -113,7 +116,7 @@
 .cllineHeight {
   font-size: 13px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -125,7 +128,12 @@
 
 .clFont {
   margin: 10px 0px 0px 0px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 13px;
+}
+
+.clEmail {
+  font-size: 13px;
+  font-weight: 400;
 }
