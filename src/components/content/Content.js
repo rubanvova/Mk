@@ -37,7 +37,10 @@ const Content = () => {
           <img src={images.marh} alt="" />
         </div>
         <div className={styles.mintitle}>
-          <TitleText children={"Основные направления деятельности"} />
+          <TitleText
+            className={styles.mintitle}
+            children={"Основные направления деятельности"}
+          />
         </div>
         <div className={styles.boxRectangle}>
           <BoxActivity />

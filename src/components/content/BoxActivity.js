@@ -9,35 +9,35 @@ const data = [
     str: "Взыскание долгов",
   },
   {
-    img: images.cerlce2,
+    img: images.cercle2,
     str: "Реорганизация бизнеса",
   },
   {
-    img: images.cerlce3,
+    img: images.cercle3,
     str: "Продажа бизнеса",
   },
   {
-    img: images.cerlce4,
+    img: images.cercle4,
     str: "Юридические консультации",
   },
   {
-    img: images.cerlce5,
+    img: images.cercle5,
     str: "Ликвидация организаций",
   },
   {
-    img: images.cerlce6,
+    img: images.cercle6,
     str: "Разработка договоров",
   },
   {
-    img: images.cerlce7,
+    img: images.cercle7,
     str: "Регистрация бизнеса",
   },
   {
-    img: images.cerlce8,
+    img: images.cercle8,
     str: "Юридический аутсорсинг",
   },
   {
-    img: images.cerlce9,
+    img: images.cercle9,
     str: "Аттестация в строительстве",
   },
 ];
