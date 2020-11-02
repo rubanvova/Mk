@@ -49,8 +49,10 @@ const Content = () => {
           <Button> {"Все услуги"} </Button>
         </div>
         <div className={styles.textTwo}>
-          <div className={styles.TextTitle}>
-            <TitleText>{"Основные направления \nдеятельности"}</TitleText>
+          <div>
+            <TitleText className={styles.TextTitle}>
+              {"Основные направления \nдеятельности"}
+            </TitleText>
           </div>
           <div>
             <Text className={styles.clMaxWidth700}>{textTwo}</Text>

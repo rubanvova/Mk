@@ -50,7 +50,9 @@ const BoxAboutas = () => {
       <div className={styles.border}></div>
       <div className={styles.rowtwo}>
         <div className={styles.text}>
-          <TitleText children="Что получает клиент" />
+          <TitleText className={styles.clMaxWodth500}>
+            {"Что получает клиент"}
+          </TitleText>
           <Text className={styles.clmaxWidth470px}>
             {
               "Юристы нашей компании готовы дать четкие, основанные на фактах, консультации, касающиеся и «типовой», и нестандартной ситуации, опираясь на сложившуюся служебную практику и многолетний опыт. Мы объективно оцениваем риски и тщательно анализируем каждый случай."

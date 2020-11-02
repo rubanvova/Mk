@@ -109,6 +109,10 @@
   font-size: 28px;
 }
 
+.TextTitle {
+  font-size: 28px;
+}
+
 .boxRectangle {
   display: flex;
   flex-wrap: wrap;
@@ -394,4 +398,5 @@
 
 .clmargin10 {
   margin-left: 10px;
+  font-size: 28px;
 }
