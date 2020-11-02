@@ -16,7 +16,7 @@ const BoxReviews = () => {
         />
         <ReviewsBox
           img={images.titlePhoto2}
-          name={"С.В.Косачев"}
+          name={"Валерий Мяснянкин"}
           body={textThree}
         />
       </div>
