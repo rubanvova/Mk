@@ -5,20 +5,26 @@ import images from "../../images";
 import { textThree } from "./constants";
 import styles from "./BoxReviews.module.css";
 
+const data = [
+  {
+    img: images.titlePhoto1,
+    name: "С.В.Косачев",
+    body: textThree,
+  },
+  {
+    img: images.titlePhoto2,
+    name: "Валерий Мяснянкин",
+    body: textThree,
+  },
+];
+
 const BoxReviews = () => {
   return (
     <>
       <div className={styles.reviews}>
-        <ReviewsBox
-          img={images.titlePhoto1}
-          name={"С.В.Косачев"}
-          body={textThree}
-        />
-        <ReviewsBox
-          img={images.titlePhoto2}
-          name={"Валерий Мяснянкин"}
-          body={textThree}
-        />
+        {data.map((i, index) => (
+          <ReviewsBox key={index} img={i.img} name={i.name} body={i.body} />
+        ))}
       </div>
       <div className={styles.panel}>
         <Button> {"Все отзывы"}</Button>
