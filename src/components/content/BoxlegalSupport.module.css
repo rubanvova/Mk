@@ -1,0 +1,41 @@
+.containerText {
+  padding: 50px 0px 60px 70px;
+}
+
+.clWidth520 {
+  width: 520px;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.clWidth370 {
+  z-index: 3;
+  width: 470px;
+}
+
+@media (max-width: 488px) {
+  .containerText {
+    padding: 10px !important;
+  }
+}
+
+@media (max-width: 646px) {
+  .containerText {
+    padding: 20px;
+  }
+  .clWidth370 {
+    width: 370px !important;
+  }
+  .clWidth520 {
+    width: 370px !important;
+  }
+}
+
+@media (max-width: 483px) {
+  .clWidth370 {
+    width: 270px !important;
+  }
+  .clWidth520 {
+    width: 270px !important;
+  }
+}

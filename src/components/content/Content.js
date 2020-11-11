@@ -6,19 +6,21 @@ import RectangleBox from "./RectangleBox";
 import Button from "../Button/Button";
 import ThreeRectangle from "./ThreeRectangle";
 import BoxServiceList from "./BoxServiceList";
-import { textOne, textTwo, textFour } from "./constants";
+import { textTwo, textFour } from "./constants";
 import Slider from "../Slider";
 import { secondarySlides } from "../../data";
 import BoxAboutas from "./BoxAboutas";
 import BoxAdvantages from "./BoxAdvantages";
 import BoxCooperation from "./BoxCooperation";
+import BoxPrice from "./BoxPrice";
+import BoxActivity from "./BoxActivity";
+import BoxReviews from "./BoxReviews";
+import BoxlegalSupport from "./BoxlegalSupport";
 
 import images from "../../images";
 
 import styles from "./Content.module.css";
-import BoxPrice from "./BoxPrice";
-import BoxActivity from "./BoxActivity";
-import BoxReviews from "./BoxReviews";
+import BoxCompanys from "./BoxCompanys";
 
 const Content = () => {
   return (
@@ -26,21 +28,12 @@ const Content = () => {
       <div className={styles.wrapperContent}>
         <RectangleBox />
         <div className={styles.container}>
-          <div className={styles.containerText}>
-            <TitleText className={styles.clWidth520}>
-              {
-                "Юридическое сопровождение бизнеса \nот «МК-Правовые технологии»"
-              }
-            </TitleText>
-            <Text className={styles.clWidth370}>{textOne}</Text>
-          </div>
-          <img src={images.marh} alt="" />
+          <BoxlegalSupport />
         </div>
         <div className={styles.mintitle}>
-          <TitleText
-            className={styles.mintitle}
-            children={"Основные направления деятельности"}
-          />
+          <TitleText className={styles.mintitle}>
+            {"Основные направления деятельности"}
+          </TitleText>
         </div>
         <div className={styles.boxRectangle}>
           <BoxActivity />
@@ -78,11 +71,7 @@ const Content = () => {
               <div>Наши партнеры</div>
             </div>
             <div className={styles.companys}>
-              <img src={images.company1} alt="" />
-              <img src={images.company2} alt="" />
-              <img src={images.company3} alt="" />
-              <img src={images.company4} alt="" />
-              <img src={images.company5} alt="" />
+              <BoxCompanys />
             </div>
           </div>
         </div>

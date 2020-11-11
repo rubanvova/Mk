@@ -357,9 +357,7 @@
   .whiteBox {
     height: 1720px;
   }
-  .clWidth370 {
-    width: 370px !important;
-  }
+
   .clWidth520 {
     width: 370px !important;
   }
@@ -391,9 +389,6 @@
   .whiteBoxTwo {
     height: 1400px;
   }
-  .clWidth370 {
-    width: 270px !important;
-  }
   .clWidth520 {
     width: 270px !important;
   }
@@ -403,19 +398,8 @@
   max-width: 670px;
 }
 
-.clWidth370 {
-  z-index: 3;
-  width: 470px;
-}
-
 .clMaxWidth700 {
   max-width: 700px;
-}
-
-.clWidth520 {
-  width: 520px;
-  font-size: 28px;
-  line-height: 40px;
 }
 
 .clmargin10 {
